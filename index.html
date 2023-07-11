@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CD Project - C Compiler</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      
+      p {
+        margin-left: 20px;
+        font-size: 18px;
+        color: #555;
+      }
+      
+      textarea {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        padding: 10px;
+        width: 70%;
+        height: 150px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+      }
+      
+      button {
+        display: inline-block;
+        margin-left: 10px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+    <script>
+      
+      function myFunction() {
+        var inputElem = document.getElementById("input");
+        var inputValue = inputElem.value;
+        initGenerate(processor(transformer(parser(tokenizer(inputValue)))));
+      }
+    </script>
+  </head>
+  <body>
+    <h1>CD Project - C Compiler</h1>
+    <p>Developed by:</p>
+    <ul>
+      <li>Rajeet Ankit (Team Leader)</li>
+      <li>Pulkit Sharma</li>
+      <li>Shaurya Chaturvedi</li>
+    </ul>
+    <center>
+        <p>This Compiler will convert C to ASM.</p>
+    </center>
+    <textarea id="input" placeholder="Enter your C code here..."></textarea>
+    <center>
+    <div>
+      <button onclick="myFunction()">Run Code</button>
+    </div>
+</center>
+<center>
+    <p>C is converted to ASM and is logged in browser console</p>
+</center>
+    <script src="tokenizer.js"></script>
+<script src="parser.js"></script>
+<script src="traverser.js"></script>
+<script src="processor.js"></script>
+<script src="verifier.js"></script>
+<script src="codeGenerator.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
